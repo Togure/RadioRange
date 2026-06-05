@@ -1,4 +1,4 @@
-# RadioRange-Sim
+# RadioRange
 
 **RF Ranging Error Simulation** — ray-tracing channel modeling, chip-level impairments, and first-path detection algorithms for UWB, WiFi, and 5G NR.
 
