@@ -258,14 +258,16 @@ def _plot_radio_maps(
 
         fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(20, 5.5))
 
-        for ax, data, title, cmap, label in [
-            (ax1, rssi, f"RSSI — {ap_id}", "RdYlBu_r", "RSSI (dBm)"),
-            (ax2, range_m, f"Estimated Range — {ap_id}", "plasma", "Range (m)"),
-            (ax3, range_err, f"Range Error — {ap_id}", "RdYlGn_r", "|Error| (m)"),
-        ]:
+        panels = [
+            (ax1, rssi, f"RSSI — {ap_id}", "RdYlBu_r", "RSSI (dBm)", None, None),
+            (ax2, range_m, f"Estimated Range — {ap_id}", "plasma", "Range (m)", None, None),
+            (ax3, range_err, f"Range Error — {ap_id}", "RdYlGn_r", "|Error| (m)",
+             np.percentile(range_err[valid], 5), np.percentile(range_err[valid], 95)),
+        ]
+        for ax, data, title, cmap, label, vmin, vmax in panels:
             ax.imshow(bg, extent=[0, room_w_m, room_h_m, 0], aspect="equal", alpha=0.25)
             sc = ax.scatter(xs[valid], ys[valid], c=data[valid], cmap=cmap,
-                           s=55, edgecolors="none", zorder=4)
+                           s=55, edgecolors="none", zorder=4, vmin=vmin, vmax=vmax)
             cb = plt.colorbar(sc, ax=ax, shrink=0.82, pad=0.02)
             cb.set_label(label, fontsize=7)
             cb.ax.tick_params(labelsize=6)
