@@ -69,7 +69,7 @@ RadioRange-Sim provides two powerful end-to-end modes designed for **integrated 
 
 Simulate ranging along a user-provided walking trajectory on any floorplan. The simulator ray-traces every TX–RX pair along the path, applies hardware impairments, runs LDE algorithms, and outputs range errors with full visualization.
 
-<img src="assets/fig6_measure.png" alt="Measure output" width="30%">
+<img src="assets/fig6_measure.png" alt="Measure output" width="45%">
 
 *Fig. 6 — Measure mode output for a T-junction scene. Clockwise from top-left: error map overlaid on floorplan, error vs. distance, error CDF, and gridded error heatmap.*
 
