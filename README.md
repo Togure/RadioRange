@@ -131,18 +131,12 @@ Output: `outputs/fingerprint/<name>_<ts>/` — per-AP radio maps (RSSI + Range +
 ### 1. Install
 
 ```bash
-# Core install (TDL channels + UWB, no Sionna required)
 git clone https://github.com/Togure/RadioRange.git
 cd radiorange-sim
-pip install -e .
-```
-
-```bash
-# Full install (ray-tracing, OFDM, 3D visualization)
 pip install -e ".[sionna]"
 ```
 
-> **Note:** Sionna requires TensorFlow (~2 GB). The core install is sufficient for statistical channels and UWB radio.
+> Sionna requires TensorFlow (~2 GB). GPU recommended for ray-tracing performance.
 
 ### 2. Run Interactive Visualization
 
