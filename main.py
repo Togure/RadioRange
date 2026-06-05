@@ -1040,7 +1040,7 @@ def parse_args() -> argparse.Namespace:
 
     # scene
     p.add_argument("--scene", default=None, metavar="NAME",
-                   help="Scene preset: box, box_knife, etoile, munich, florence, simple_room, tdl_a..tdl_e, two_path")
+                   help="Scene preset: box, box_knife, box_knife_concrete, etoile, munich, florence, simple_room, tdl_a..tdl_e, two_path")
     p.add_argument("--list-scenes", action="store_true", help="List available scene presets and exit.")
 
     # radios
