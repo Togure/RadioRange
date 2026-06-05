@@ -265,7 +265,7 @@ def _plot_radio_maps(
         ]:
             ax.imshow(bg, extent=[0, room_w_m, room_h_m, 0], aspect="equal", alpha=0.25)
             sc = ax.scatter(xs[valid], ys[valid], c=data[valid], cmap=cmap,
-                           s=35, edgecolors="none", zorder=4)
+                           s=55, edgecolors="none", zorder=4)
             cb = plt.colorbar(sc, ax=ax, shrink=0.82, pad=0.02)
             cb.set_label(label, fontsize=7)
             cb.ax.tick_params(labelsize=6)
