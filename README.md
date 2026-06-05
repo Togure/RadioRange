@@ -49,14 +49,14 @@ All three protocols — UWB, WiFi, and 5G — are placed on the **same physical 
 <img src="assets/fig2_environment.png" alt="Ray-traced environment" width="60%">
 *Fig. 2 — 3D ray-traced environment visualization: outdoor urban and indoor multipath propagation using Sionna RT's Shooting-and-Bouncing Rays (SBR) engine with frequency-dependent Fresnel material interactions.*
 
-<img src="assets/fig3_cir.png" alt="CIR comparison" width="60%">
+<img src="assets/fig3_cir.png" alt="CIR comparison" width="40%">
 *Fig. 3 — CIR comparison across protocols: UWB (~2 ns resolution), WiFi (~6.3 ns), and 5G NR (~8.1 ns) continuous CIR curves overlaid on the same delay axis. The gray dashed line marks the clean (noiseless) CIR; the vertical marker shows the ground-truth first-path delay τ₀. UWB's wider bandwidth gives it visibly superior multipath resolvability.*
 
-<img src="assets/fig4_detection.png" alt="Detection & multipath" width="60%">
+<img src="assets/fig4_detection.png" alt="Detection & multipath" width="40%">
 *Fig. 4 — First-path detection and multipath identification overlaid on CIR. Three stacked panels show qualitatively different channel conditions (varying TX-RX geometry and multipath complexity), with algorithm first-path estimates marked per protocol and detected paths color-coded by interaction type (Reflection, Diffraction, Refraction).*
 
 
-<img src="assets/fig5_cdf.png" alt="Error CDFs" width="60%">
+<img src="assets/fig5_cdf.png" alt="Error CDFs" width="40%">
 *Fig. 5 — Ranging error CDF comparison. Four sub-panels arranged in a 2×2 grid: protocol-level comparison (UWB vs. WiFi vs. 5G) and algorithm-level comparison (Threshold, SearchBack, ChipLDE, LeadingEdge) under various impairment conditions. Inset zoom boxes magnify the P10–P90 region for finer discrimination.*
 
 ---
@@ -69,7 +69,7 @@ RadioRange-Sim provides two powerful end-to-end modes designed for **integrated 
 
 Simulate ranging along a user-provided walking trajectory on any floorplan. The simulator ray-traces every TX–RX pair along the path, applies hardware impairments, runs LDE algorithms, and outputs range errors with full visualization.
 
-<img src="assets/fig6_measure.png" alt="Measure output" width="70%">
+<img src="assets/fig6_measure.png" alt="Measure output" width="30%">
 
 *Fig. 6 — Measure mode output for a T-junction scene. Clockwise from top-left: error map overlaid on floorplan, error vs. distance, error CDF, and gridded error heatmap.*
 
