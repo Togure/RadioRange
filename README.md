@@ -193,7 +193,7 @@ If you use RadioRange-Sim in your research:
 
 ```bibtex
 @software{radiorange_sim,
-  author = {Zhen LYU},
+  author = {Lyu, Zhen},
   title = {RadioRange-Sim: RF Ranging Simulation Framework},
   year = {2026},
   url = {https://github.com/Togure/RadioRange},
@@ -201,7 +201,7 @@ If you use RadioRange-Sim in your research:
 
 @inproceedings{RadioRange,
   title={RadioRange: An Open-Source Digital Twin-based Ranging Simulator for UWB, Wi-Fi, and 5G},
-  author={Zhen Lyu, et.al.},
+  author={Lyu, Zhen, et.al.},
   booktitle={on going...},
   pages={},
   year={},
