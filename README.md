@@ -133,10 +133,19 @@ Output: `outputs/fingerprint/<name>_<ts>/` — per-AP radio maps (RSSI + Range +
 ```bash
 git clone https://github.com/Togure/RadioRange.git
 cd radiorange-sim
+
+# Full install — required for interactive / measure / fingerprint / rt-viz
 pip install -e ".[sionna]"
 ```
 
 > Sionna requires TensorFlow (~2 GB). GPU recommended for ray-tracing performance.
+
+```bash
+# Minimal install — only if you just want TDL statistical channels + single mode
+pip install -e .
+```
+
+> The minimal install skips Sionna and works **only** for `--scene tdl_a..tdl_e` in `--mode single`. All other modes and scenes require the full install above.
 
 ### 2. Run Interactive Visualization
 
