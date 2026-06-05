@@ -30,7 +30,7 @@ Channel (RT / TDL)  →  Hardware Impairments  →  Radio Observation (CIR)  →
 
 All three protocols — UWB, WiFi, and 5G — are placed on the **same physical channel**, enabling fair, reproducible cross-protocol comparison. A unified CIR-based algorithm interface makes every LDE (Leading-Edge Detection) algorithm work identically across all protocols.
 
-<img src="assets/fig1_architecture" alt="Architecture" width="90%">
+<img src="assets/fig1_architecture.png" alt="Architecture" width="90%">
 *Fig. 1 — Five-layer system architecture. The pipeline flows unidirectionally through Environment → Hardware Impairments → Transceiver → Algorithms → Evaluation, with three immutable data structures (ChannelTruth, RadioObservation, RangeEstimate) enforcing clean separation between layers.*
 
 ### Key Features
@@ -46,13 +46,13 @@ All three protocols — UWB, WiFi, and 5G — are placed on the **same physical 
 
 ### What It Looks Like
 
-<img src="assets/fig2_environment" alt="Ray-traced environment" width="60%">
+<img src="assets/fig2_environment.png" alt="Ray-traced environment" width="60%">
 *Fig. 2 — 3D ray-traced environment visualization: outdoor urban and indoor multipath propagation using Sionna RT's Shooting-and-Bouncing Rays (SBR) engine with frequency-dependent Fresnel material interactions.*
 
-<img src="assets/fig3_cir" alt="CIR comparison" width="60%">
+<img src="assets/fig3_cir.png" alt="CIR comparison" width="60%">
 *Fig. 3 — CIR comparison across protocols: UWB (~2 ns resolution), WiFi (~6.3 ns), and 5G NR (~8.1 ns) continuous CIR curves overlaid on the same delay axis. The gray dashed line marks the clean (noiseless) CIR; the vertical marker shows the ground-truth first-path delay τ₀. UWB's wider bandwidth gives it visibly superior multipath resolvability.*
 
-<img src="assets/fig4_detection" alt="Detection & multipath" width="60%">
+<img src="assets/fig4_detection.png" alt="Detection & multipath" width="60%">
 *Fig. 4 — First-path detection and multipath identification overlaid on CIR. Three stacked panels show qualitatively different channel conditions (varying TX-RX geometry and multipath complexity), with algorithm first-path estimates marked per protocol and detected paths color-coded by interaction type (Reflection, Diffraction, Refraction).*
 
 
@@ -69,7 +69,7 @@ RadioRange-Sim provides two powerful end-to-end modes designed for **integrated 
 
 Simulate ranging along a user-provided walking trajectory on any floorplan. The simulator ray-traces every TX–RX pair along the path, applies hardware impairments, runs LDE algorithms, and outputs range errors with full visualization.
 
-<img src="assets/fig1_architecture" alt="Measure output" width="70%">
+<img src="assets/fig6_measure.png" alt="Measure output" width="70%">
 
 *Fig. 6 — Measure mode output for a T-junction scene. Clockwise from top-left: error map overlaid on floorplan, error vs. distance, error CDF, and gridded error heatmap.*
 
@@ -97,7 +97,7 @@ Output: `outputs/measure/<scene>_<ts>/` — error map, error vs. distance, CDF, 
 
 Generate a dense WiFi fingerprint radio map on a floorplan grid. Given a PNG floorplan and AP positions, the simulator runs Sionna ray-tracing at every grid point × AP pair, computes **RSSI from multipath channel gains** and **range estimates via LDE**, then produces per-AP visualization panels.
 
-![Fingerprint output](assets/fig7_fingerprint.png)
+<img src="assets/fig7_fingerprint.png" alt="Fingerprint output" width="100%">
 *Fig. 7 — Fingerprint radio map for a complex building with 2 auto-placed APs (★). Three panels per AP: RSSI heatmap (dBm), estimated range (m), and range error (m).*
 
 ```bash
