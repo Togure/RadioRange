@@ -1,0 +1,29 @@
+<scene version="2.1.0">
+
+<!-- Materials: box=concrete, knife=concrete (both concrete) -->
+
+    <bsdf type="itu-radio-material" id="box-mat">
+        <string name="type" value="concrete"/>
+        <float name="thickness" value="0.10"/>
+    </bsdf>
+
+    <bsdf type="itu-radio-material" id="knife-mat">
+        <string name="type" value="concrete"/>
+        <float name="thickness" value="0.05"/>
+    </bsdf>
+
+<!-- Shapes -->
+
+	<shape type="ply" id="mesh-box" name="mesh-Box">
+		<string name="filename" value="/home/zhen/Dropbox/RadioRangeSimulation/.venv/lib/python3.11/site-packages/sionna/rt/scenes/box_knife_concrete/meshes/Box.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="box-mat" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-knife" name="mesh-Knife">
+		<string name="filename" value="/home/zhen/Dropbox/RadioRangeSimulation/.venv/lib/python3.11/site-packages/sionna/rt/scenes/box_knife_concrete/meshes/Knife.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="knife-mat" name="bsdf"/>
+	</shape>
+
+
+</scene>

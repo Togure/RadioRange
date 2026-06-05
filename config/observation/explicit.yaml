@@ -1,0 +1,63 @@
+# Explicit frequency-domain observation model — residual errors after receiver compensation.
+#
+# Raw device impairments (SFO, CFO, ADC bits, AGC, antenna PCV) are defined
+# per-protocol in radio_profiles/default_radios.yaml.  This file only defines
+# the *residual* errors that remain after the receiver's digital compensation.
+#
+# SNR values per protocol:
+#   UWB  30 dB — coherent accumulation over 1024+ preamble pulses adds
+#          ~30 dB processing gain to the raw single-pulse SNR.
+#   WiFi 30 dB — 802.11ax 160 MHz, ~10 m indoor range, typical RSSI -55 dBm.
+#   5G   25 dB — 5G NR FR1 100 MHz, wider subcarrier spacing (30 kHz) means
+#          less energy per subcarrier than WiFi.
+{
+  "radios": {
+    "uwb": {
+      "observation_model": "explicit",
+      "explicit_impairments": {
+        "csi_noise_snr_db": 30,
+        "csi_amplitude_std": 0.04,
+        "csi_phase_std_rad": 0.08,
+        "common_phase_std_rad": 0.04,
+        "random_sampling_phase_std_s": 0.00000000035,
+        "sfo_residual_ppm": 2,
+        "sfo_reference_delay_s": 0.0000001
+      }
+    },
+    "wifi": {
+      "observation_model": "explicit",
+      "explicit_impairments": {
+        "csi_noise_snr_db": 30,
+        "csi_amplitude_std": 0.025,
+        "csi_phase_std_rad": 0.04,
+        "common_phase_std_rad": 0.025,
+        "random_sampling_phase_std_s": 0.00000000012,
+        "sfo_residual_ppm": 1,
+        "sfo_reference_delay_s": 0.0000001,
+        "dc_null": true,
+        "active_subcarrier_fraction": 0.82,
+        "channel_estimation_mode": "ltf"
+      }
+    },
+    "fiveg": {
+      "observation_model": "explicit",
+      "explicit_impairments": {
+        "csi_noise_snr_db": 25,
+        "csi_amplitude_std": 0.03,
+        "csi_phase_std_rad": 0.05,
+        "common_phase_std_rad": 0.03,
+        "random_sampling_phase_std_s": 0.00000000018,
+        "sfo_residual_ppm": 1,
+        "sfo_reference_delay_s": 0.0000001,
+        "dc_null": true,
+        "active_subcarrier_fraction": 0.78,
+        "channel_estimation_mode": "2d",
+        "num_ofdm_symbols": 14,
+        "dmrs_symbol_indices": [2, 6, 10],
+        "dmrs_freq_spacing": 6,
+        "dmrs_residual_cfo_hz": 50,
+        "dmrs_cpe_std_rad": 0.02
+      }
+    }
+  }
+}

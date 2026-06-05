@@ -1,0 +1,60 @@
+{
+  "radios": {
+    "uwb": {
+      "enabled": true,
+      "carrier_frequency_hz": 7987200000.0,
+      "bandwidth_hz": 499200000.0,
+      "cir_bins": 1024,
+      "accumulation_count": 128,
+      "interpolation_factor": 10,
+      "window": "hamming",
+
+      "adc_bits": 6,
+      "sfo_ppm": 20.0,
+      "cfo_hz": 500.0,
+      "agc_gain_step_db": 3.0,
+      "agc_max_gain_db": 30.0,
+      "antenna_pcv_magnitude_m": 0.005,
+
+      "enable_iq_imbalance": false,
+      "iq_gain_imbalance": 0.03,
+      "iq_phase_imbalance_deg": 3.0
+    },
+    "wifi": {
+      "enabled": true,
+      "carrier_frequency_hz": 5180000000.0,
+      "fft_size": 512,
+      "subcarrier_spacing_hz": 312500.0,
+      "interpolation_factor": 10,
+
+      "adc_bits": 10,
+      "sfo_ppm": 10.0,
+      "cfo_hz": 300.0,
+      "agc_gain_step_db": 1.0,
+      "agc_max_gain_db": 40.0,
+      "antenna_pcv_magnitude_m": 0.003,
+
+      "enable_iq_imbalance": false,
+      "iq_gain_imbalance": 0.015,
+      "iq_phase_imbalance_deg": 1.5
+    },
+    "fiveg": {
+      "enabled": true,
+      "carrier_frequency_hz": 4800000000.0,
+      "fft_size": 4096,
+      "subcarrier_spacing_hz": 30000.0,
+      "interpolation_factor": 10,
+
+      "adc_bits": 12,
+      "sfo_ppm": 5.0,
+      "cfo_hz": 200.0,
+      "agc_gain_step_db": 1.0,
+      "agc_max_gain_db": 50.0,
+      "antenna_pcv_magnitude_m": 0.003,
+
+      "enable_iq_imbalance": false,
+      "iq_gain_imbalance": 0.01,
+      "iq_phase_imbalance_deg": 1.0
+    }
+  }
+}

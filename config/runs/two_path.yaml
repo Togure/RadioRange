@@ -1,0 +1,11 @@
+{
+  "include": [
+    "../defaults.yaml",
+    "../radio_profiles/default_radios.yaml",
+    "../observation/snr.yaml",
+    "../impairments/none.yaml",
+    "../channels/two_path.yaml",
+    "../experiments/ranging/ranging.yaml"
+  ],
+  "output_dir": "outputs/two_path"
+}

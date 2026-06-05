@@ -1,0 +1,16 @@
+{
+  "radios": {
+    "uwb": {
+      "observation_model": "snr",
+      "snr_db": 30
+    },
+    "wifi": {
+      "observation_model": "snr",
+      "snr_db": 30
+    },
+    "fiveg": {
+      "observation_model": "snr",
+      "snr_db": 25
+    }
+  }
+}

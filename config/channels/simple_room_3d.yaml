@@ -1,0 +1,28 @@
+{
+  "environment": {
+    "type": "simple_room",
+    "engine": "sionna_rect_room",
+    "_comment_engine": "Sionna RT rectangular room. Requires Sionna. Use 'image_method' for pure-numpy fallback.",
+    "num_trials": 32,
+    "dimensions_m": [4.0, 4.0, 3.0],
+    "tx_position_m": [0.0, 0.0, 1.5],
+    "rx_position_m": [2.0, 0.0, 1.5],
+    "max_reflections": 1,
+    "materials": {
+      "floor": "itu_concrete",
+      "ceiling": "itu_ceiling_board",
+      "wall_x_min": "itu_brick",
+      "wall_x_max": "itu_brick",
+      "wall_y_min": "itu_plasterboard",
+      "wall_y_max": "itu_plasterboard"
+    },
+    "_comment_materials": "Per-wall materials from ITU-R P.2040. Each wall gets its own radio-material BSDF with explicit ε' and σ in Sionna. Single 'material' key for uniform walls.",
+    "wall_thickness_m": 0.1,
+    "_comment_sionna_toggles": "Sionna PathSolver propagation mechanisms:",
+    "los": true,
+    "specular_reflection": true,
+    "diffuse_reflection": false,
+    "refraction": false,
+    "diffraction": false
+  }
+}

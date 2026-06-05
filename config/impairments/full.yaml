@@ -1,0 +1,13 @@
+{
+  "impairments": {
+    "enable_antenna_offset": true,
+    "enable_sfo": true,
+    "enable_cfo": true,
+    "enable_adc_phase_offset": true,
+    "adc_phase_offset_s": 0.0,
+    "enable_adc_quantization": true,
+    "enable_agc": true,
+    "agc_clip_enable": true,
+    "enable_iq_imbalance": true
+  }
+}

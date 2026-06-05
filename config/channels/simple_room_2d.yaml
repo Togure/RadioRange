@@ -1,0 +1,16 @@
+{
+  "environment": {
+    "type": "simple_room",
+    "engine": "image_method",
+    "_comment_engine": "image_method (numpy) or sionna_rect_room (Sionna RT, 3D only)",
+    "num_trials": 32,
+    "dimensions_m": [8.0, 6.0],
+    "tx_position_m": [1.0, 1.0],
+    "rx_position_m": [6.5, 4.5],
+    "max_reflections": 1,
+    "material": "itu_concrete",
+    "_comment_material": "Single material for all walls. For per-wall control, use 'materials' dict instead.",
+    "_comment_materials_dict": "materials: {floor: itu_concrete, ceiling: itu_ceiling_board, wall_x_min: itu_brick, wall_x_max: itu_brick, wall_y_min: itu_plasterboard, wall_y_max: itu_plasterboard}",
+    "_comment_fresnel": "If reflection_loss is set, that value is used directly for all walls. Otherwise, the Fresnel power reflection coefficient is computed from each wall's material at the radio's carrier frequency."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "environment": {
+    "type": "standard_tdl",
+    "model": "TDL-A",
+    "delay_spread_s": 0.00000003,
+    "base_range_m": 10.0,
+    "num_trials": 200
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "seed": 42,
+  "channel_engine": "auto",
+  "timing": {
+    "mode": "one_way_tof",
+    "rtt_mode": false,
+    "sync_bias_s": 0.0,
+    "clock_bias_s": 0.0
+  },
+  "impairments": {
+    "enable_sfo": false,
+    "sfo_ppm": 0.0,
+    "enable_cfo": false,
+    "cfo_hz": 0.0,
+    "enable_adc_phase_offset": false,
+    "adc_phase_offset_s": 0.0,
+    "enable_adc_quantization": false,
+    "adc_bits": 10,
+    "enable_iq_imbalance": false,
+    "iq_gain_imbalance": 0.0,
+    "iq_phase_imbalance_deg": 0.0,
+    "enable_agc": false,
+    "agc_gain_step_db": 3.0,
+    "agc_max_gain_db": 30.0,
+    "agc_settling_us": 2.0,
+    "agc_clip_enable": false,
+    "enable_antenna_offset": false,
+    "antenna_pcv_magnitude_m": 0.003
+  },
+  "algorithms": {
+    "primary": "threshold",
+    "threshold_peak_ratio": 0.18
+  },
+  "plots": {
+    "time_window_ns": 120.0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "environment": {
+    "type": "manual_paths",
+    "num_trials": 100,
+    "true_range_m": 5.0,
+    "los": true,
+    "paths": [
+      {"name": "los", "tau_s": 0.00000001668, "amplitude": 1.0, "phase_rad": 0.0},
+      {"name": "wall_reflection", "tau_s": 0.00000002668, "amplitude": 0.5, "phase_rad": 2.8}
+    ]
+  },
+  "plots": {
+    "time_window_ns": 60.0
+  }
+}

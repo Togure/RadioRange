@@ -1,0 +1,11 @@
+{
+  "include": [
+    "../defaults.yaml",
+    "../radio_profiles/default_radios.yaml",
+    "../observation/explicit.yaml",
+    "../impairments/full.yaml",
+    "../channels/tdl_a.yaml",
+    "../experiments/ranging/ranging.yaml"
+  ],
+  "output_dir": "outputs/tdl_a_ranging"
+}

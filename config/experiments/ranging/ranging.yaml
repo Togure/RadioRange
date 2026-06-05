@@ -1,0 +1,16 @@
+{
+  "experiment": "ranging",
+  "timing": {
+    "mode": "one_way_tof",
+    "rtt_mode": false,
+    "sync_bias_s": 0.0,
+    "clock_bias_s": 0.0
+  },
+  "algorithms": {
+    "primary": "threshold",
+    "threshold_peak_ratio": 0.18
+  },
+  "plots": {
+    "time_window_ns": 120.0
+  }
+}
