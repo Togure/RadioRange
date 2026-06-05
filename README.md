@@ -8,7 +8,7 @@
 
 ---
 
-> **New to RF positioning?** Wondering how radio waves translate into distance measurements — and why off-the-shelf telecom simulators never quite capture what matters for localization?
+> **New to RF positioning?** Wondering how radio waves translate into distance measurements — and why off-the-shelf telecom simulators never quite capture what matters for localization error?
 >
 > **Researching RF localization?** Need a fair, reproducible way to benchmark first-path detection, multipath identification, and ranging error across UWB, WiFi, and 5G — all on the same physical channel?
 >
@@ -91,7 +91,7 @@ Output: `outputs/measure/<scene>_<ts>/` — error map, error vs. distance, CDF, 
 
 > See **[MODES.md](MODES.md#measure)** for full measure customization (built-in scenes, CSV format, algorithm selection, impairments).
 
-### Fingerprint — WiFi RSSI Radio Map Generation
+### Fingerprint — WiFi RSSI/RTT Radio Map Generation
 
 Generate a dense WiFi fingerprint radio map on a floorplan grid. Given a PNG floorplan and AP positions, the simulator runs Sionna ray-tracing at every grid point × AP pair, computes **RSSI from multipath channel gains** and **range estimates via LDE**, then produces per-AP visualization panels.
 
