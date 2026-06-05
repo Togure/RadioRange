@@ -97,14 +97,13 @@ Output: `outputs/measure/<scene>_<ts>/` — error map, error vs. distance, CDF, 
 
 Generate a dense WiFi fingerprint radio map on a floorplan grid. Given a PNG floorplan and AP positions, the simulator runs Sionna ray-tracing at every grid point × AP pair, computes **RSSI from multipath channel gains** and **RTT range estimates via LDE**, then produces per-AP visualization panels.
 
-A typical real-world fingerprint survey might sample at 2 m spacing (left). With simulation, you can generate arbitrarily dense radio maps — here at 0.5 m spacing (right) — without ever walking the floor:
+A typical real-world fingerprint survey might sample at 2 m spacing. With simulation, you can generate arbitrarily dense radio maps — here at 0.5 m — without ever walking the floor:
 
-<table>
-<tr>
-<td width="50%"><img src="assets/fig7_fingerprint.png" alt="Fingerprint 2m" width="100%"><br><em>Fig. 7 — Fingerprint radio map at 2 m grid spacing (164 points, ~typical field survey density).</em></td>
-<td width="50%"><img src="assets/fig8_fingerprint_dense.png" alt="Fingerprint 0.5m" width="100%"><br><em>Fig. 8 — Same floorplan at 0.5 m grid spacing (2,596 points, ~16× denser).</em></td>
-</tr>
-</table>
+<img src="assets/fig7_fingerprint.png" alt="Fingerprint 2m" width="100%">
+*Fig. 7 — Fingerprint radio map at 2 m grid spacing (164 points, AP2, ~typical field survey density).*
+
+<img src="assets/fig8_fingerprint_dense.png" alt="Fingerprint 0.5m" width="100%">
+*Fig. 8 — Same floorplan at 0.5 m grid spacing (2,596 points, AP2, ~16× denser).*
 
 ```bash
 # Default — 2 auto-placed APs, 2 m grid
