@@ -59,6 +59,10 @@ All three protocols — UWB, WiFi, and 5G — are placed on the **same physical 
 <img src="assets/fig5_cdf.png" alt="Error CDFs" width="40%">
 *Fig. 5 — Ranging error CDF comparison. Four sub-panels arranged in a 2×2 grid: protocol-level comparison (UWB vs. WiFi vs. 5G) and algorithm-level comparison (Threshold, SearchBack, ChipLDE, LeadingEdge) under various impairment conditions. Inset zoom boxes magnify the P10–P90 region for finer discrimination.*
 
+<img src="assets/realeval.png" alt="Evaluation" width="40%">
+*Fig. 5 — Top row: Experimental setups and trajectory ranging error heatmaps for Wi-Fi (corridor) and UWB (L-junction). Middle row: CDF of ranging errors comparing UWB, Wi-Fi, and 5G protocols. Bottom row: Per-sample error traces overlaid for simulation and experiment.*
+
+
 ---
 
 ## Core Capabilities
