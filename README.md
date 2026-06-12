@@ -204,13 +204,6 @@ radiorange --mode ablation --ablation-mode ablation --trials 100
 If you use RadioRange-Sim in your research:
 
 ```bibtex
-@software{radiorange_sim,
-  author = {Lyu, Zhen},
-  title = {RadioRange-Sim: RF Ranging Simulation Framework},
-  year = {2026},
-  url = {https://github.com/Togure/RadioRange},
-}
-
 @inproceedings{RadioRange,
   title={RadioRange: An Open-Source Digital Twin-based Ranging Simulator for UWB, Wi-Fi, and 5G},
   author={Lyu, Zhen, et.al.},
